@@ -1,3 +1,4 @@
+# Here I've used several locators for web elements
 class MainPageLocators:
     TITLE_TEXT = "//h3[contains(text(),'Super Calculator')]"
     FIRST_FIELD = '[ng-model="first"]'

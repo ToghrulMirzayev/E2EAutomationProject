@@ -1,6 +1,6 @@
 from base.base_object import BaseObject
 from locators.locators import MainPageLocators as l
-import pytest_check as check  # pytest_check is used for multiple asserts in order to check all asserts in 1 test case.
+import pytest_check as check
 
 
 class MainPageSteps(BaseObject):
@@ -44,6 +44,7 @@ class MainPageAsserts(BaseObject):
         assert expected_text == actual_text, f'Error. Expected text is {expected_text}, ' \
                                              f'but actual text is {actual_text}'
 
+    # on below functions I've used pytest_check library in order to assert multiple checks in 1 test case.
     def assert_lower_sub_result_field(self, value):
         expected_text = value
         actual_text = self.is_present('css', l.LOWER_SUB_RESULT_FIELD).text
@@ -54,7 +55,7 @@ class MainPageAsserts(BaseObject):
         actual_text = self.is_present('css', l.UPPER_SUB_RESULT_FIELD).text
         check.equal(expected_text, actual_text)
 
-    def list_exp(self):
+    def assert_list_expressions(self):
         exp_list = []
         exp_list = self.are_visible('css', l.LIST_EXPRESSIONS, 'List of Expressions')
         check.equal(len(exp_list), 2)

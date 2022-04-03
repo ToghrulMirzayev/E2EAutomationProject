@@ -72,4 +72,4 @@ class TestMainPage:
             asserts.assert_upper_sub_result_field(value=str(4 * 4))
             time.sleep(1)
         with allure.step('Verify that there are 2 expressions after 2 math operations'):
-            asserts.list_exp()
+            asserts.assert_list_expressions()
