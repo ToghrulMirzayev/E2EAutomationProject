@@ -5,7 +5,7 @@ This is the E2E Test Automation project which is created by me. I have used Page
 1. Python as a programming language
 2. Pytest as a test framework
 3. Allure as a reporting tool
-4. Selenium library is used for browser automation
+4. Selenium WebDriver is used for browser automation
 
 Test object URL: http://juliemr.github.io/protractor-demo/
 
